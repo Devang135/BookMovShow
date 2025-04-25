@@ -31,9 +31,7 @@ public class MovieController {
 
     @DeleteMapping("/{id}")
     public void deleteMovie(@PathVariable Long id) {
-        Movie movie = movieService.deleteMovie(id);
-        String message = " Movie is "+movie.getname()
-        return ResponseEntity.ok();
+        movieService.deleteMovie(id);
     }
 }
 
